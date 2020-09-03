@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #09091f;
+}
+/* 重写borderbox11样式 */
+.dv-border-box-11 .border-box-content {
+  padding: 55px 10px 10px;
+  position: absolute;
+}
+.dv-border-box1.border-box {
+  height: 240px;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+.dv-border-box-1.border-box .border-box-content {
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container .full-title {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container .content {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container .content .left {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 30%;
 }
-
-.App-link {
-  color: #61dafb;
+.container .content .center {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .content .right {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
 }
