@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #09091f;
+
+  .full-title {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .top-con {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 65%;
+
+    .top-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30%;
+      height: 100%;
+    }
+
+    .top-center {
+      display: flex;
+      width: 40%;
+      height: 100%;
+    }
+
+    .top-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30%;
+      height: 100%;
+    }
+  }
+
+  .bottom-con {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 35%;
+
+    .bottom-left {
+      width: 30%;
+      height: 100%;
+    }
+
+    .bottom-center {
+      width: 40%;
+      height: 100%;
+    }
+
+    .bottom-right {
+      width: 30%;
+      height: 100%;
+    }
+  }
+
+  .card-container {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    flex-grow: 1;
+    
+    .digital-title {
+      font-size: 18px;
+      color: #fff;
+    }
+  
+    .digital-title1 {
+      width: 50px;
+      flex-shrink: 0;
+      font-size: 16px;
+      color: aqua;
+    }
+  
+    .digital-title2 {
+      width: 50px;
+      flex-shrink: 0;
+      font-size: 16px;
+      color: aquamarine;
+    }
+  
+    .digital-number1 {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 45px;
+      transform: translateY(-50%);
+    }
+  
+    .digital-number2 {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 75px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+/* 重写borderbox11样式 */
+.dv-border-box-11>.border-box-content {
+  padding: 55px 10px 10px;
+  position: absolute;
+}
+.dv-border-box-1.border-box {
+  height: 240px;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+.dv-border-box-1.border-box .border-title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 20px;
+}
+.dv-border-box-1.border-box .border-box-content {
+  padding: 30px 20px 20px;
+}
+// 调整数字翻牌器位置
+.dv-digital-flop {
+  transform: translateY(2px);
+}
