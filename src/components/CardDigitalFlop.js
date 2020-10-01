@@ -11,7 +11,8 @@ class CardDigitalFlop extends Component {
         number: [111],
         style: {
           fontSize: 20,
-          fill: "#3de7c9"
+          fontFamily: "YouSheBiaoTiHei",
+          fill: "#55E3FF"
         },
         textAlign: "left"
       },
@@ -19,7 +20,8 @@ class CardDigitalFlop extends Component {
         number: [111],
         style: {
           fontSize: 20,
-          fill: "#3de7c9"
+          fontFamily: "YouSheBiaoTiHei",
+          fill: "#5DFFE4"
         },
         textAlign: "left"
       }

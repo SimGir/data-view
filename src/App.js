@@ -8,6 +8,7 @@ import CapsuleBarChart from './components/CapsuleBarChart'
 import ConeBarChart from './components/ConeBarChart'
 import FlylineMapChart from './components/FlylineMapChart'
 import CardDigitalFlop from './components/CardDigitalFlop'
+import PercentLevel from './components/PercentLevel'
 
 import './App.less';
 class App extends Component {
@@ -20,7 +21,7 @@ class App extends Component {
       // 轮播表格
       tableConfig: {
         rowNum: 9,
-        waitTime: 1000,
+        waitTime: 2000,
         headerHeight: 35,
         carousel: 'page',
         hoverPause: false
@@ -28,6 +29,20 @@ class App extends Component {
       // 排名轮播
       rankingConfig: {
         carousel: "page"
+      },
+      // 水位图
+      waterConfig: {
+        data: [55],
+        shape: "round"
+      },
+      // 进度池
+      percentageConfig: {
+        value: 0,
+        borderWidth: 5,
+        borderRadius: 10,
+        borderGap: 5,
+        lineDash: [10,2],
+        localGradient: true
       },
       // 动态环图
       rangConfig: {},
@@ -420,17 +435,18 @@ class App extends Component {
   }
 
   render() {
-    let { title, loading, tableConfig, rankingConfig, rangConfig, barConfig, coneBarConfig, mapConfig, digitalConfig } = this.state
+    let { title, loading, tableConfig, rankingConfig, waterConfig, percentageConfig, rangConfig, barConfig, coneBarConfig, mapConfig, digitalConfig } = this.state
     return (
       <div className="container">
         {!loading ?
           <FullScreenContainer>
-            <BorderBox11>
+            <BorderBox11 color={[ "#00baff", "#13576f"]}>
               <div className="full-title">{title}</div>
               <div className="top-con">
                 <div className="top-left">
                   <RankingScrollBoard config={rankingConfig} />
-                  <RankingScrollBoard config={rankingConfig} />
+                  <PercentLevel waterConfig={waterConfig} percentageConfig={percentageConfig} />
+                  {/* <RankingScrollBoard config={rankingConfig} /> */}
                 </div>
                 <div className="top-center">
                   <FlylineMapChart config={mapConfig} />
@@ -442,7 +458,7 @@ class App extends Component {
               </div>
               <div className="bottom-con">
                 <div className="bottom-left">
-                  <BorderBox1 backgroundColor="#09091f" className="border-box">
+                  <BorderBox1 color={[ "#00baff", "#13576f"]} className="border-box" style={{height: "100%"}}>
                     <div style={{display: "flex", flexWrap: "wrap"}}>
                       <CardDigitalFlop data={digitalConfig} />
                       <CardDigitalFlop data={digitalConfig} />

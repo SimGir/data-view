@@ -5,7 +5,7 @@ import {  BorderBox1, Loading } from '@jiaminghi/data-view-react'
 class ContentLoading extends Component {
   render() {
     return (
-      <BorderBox1 backgroundColor="#09091f" className="border-box">
+      <BorderBox1 color={[ "#00baff", "#13576f"]} className="border-box">
         <Loading />
       </BorderBox1>
     )

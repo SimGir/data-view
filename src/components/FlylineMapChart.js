@@ -6,7 +6,7 @@ class FlylineMapChart extends Component {
   render() {
     let { config } = this.props
     return (
-      <BorderBox1 backgroundColor="#09091f" className="border-box" style={{width: "100%", height: "100%"}}>
+      <BorderBox1 color={[ "#00baff", "#13576f"]} className="border-box" style={{width: "100%", height: "100%"}}>
         <FlylineChartEnhanced dev={true} config={config} style={{width: "100%", height: "100%"}} />
       </BorderBox1>
     )
